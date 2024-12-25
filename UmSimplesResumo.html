@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Um Simples Resumo</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: #121212 url("rosas_campo.jpg") no-repeat center center fixed;
+        background-size: cover;
+        background-blend-mode: overlay;
+        font-family: "Georgia", serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+      }
+      .container {
+        text-align: center;
+        width: 80%;
+        max-width: 800px;
+      }
+      .line {
+        font-size: 1.5rem;
+        color: #ffffff;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s ease, transform 1s ease;
+        letter-spacing: normal;
+        font-weight: normal;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      }
+      .line.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="poem-container">
+      <div class="line">A tranquilidade é lago em um dia ensolarado,</div>
+      <div class="line">
+        Onde os peixes nadam livremente para qualquer lado,
+      </div>
+      <div class="line">
+        A energia é o mar agitado em uma noite de lua cheia,
+      </div>
+      <div class="line">
+        Onde a resiliência é a prova para vencer qualquer correnteza.
+      </div>
+      <br />
+      <br />
+      <div class="line">A alegria é um pássaro voando,</div>
+      <div class="line">
+        Onde a liberdade traz a felicidade de estar em constante movimento,
+      </div>
+      <div class="line">A paz é um ramo verde,</div>
+      <div class="line">
+        Onde o senso de propósito inspira o seu eu mais verdadeiro.
+      </div>
+      <br />
+      <br />
+      <div class="line">O valor é um diamante raro,</div>
+      <div class="line">
+        Sabe o quanto foi submetido até tornar tão belo, forte e preparado,
+      </div>
+      <div class="line">O tempo é um vento,</div>
+      <div class="line">
+        Sabe que está sempre passando mas somente a força torna a importância do
+        momento.
+      </div>
+      <br />
+      <br />
+      <div class="line">A mente é uma planta, deve ser regada,</div>
+      <div class="line">
+        Com belas histórias e experiências para se sentir amada,
+      </div>
+      <div class="line">O coração é um carvão, deve ser aquecido,</div>
+      <div class="line">
+        Estar ao lado de pessoas que trate e seja tratado com carinho.
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const lines = document.querySelectorAll(".line");
+        lines.forEach((line, index) => {
+          setTimeout(() => {
+            line.classList.add("visible");
+          }, index * 1500);
+        });
+      });
+    </script>
+  </body>
+</html>
